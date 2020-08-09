@@ -1,0 +1,28 @@
+.txt-main-crm {
+  color: #e3e3e3;
+  font-size: 46px;
+  font-family: YekanBakh;
+  font-weight: 600;
+}
+
+.button-start {
+  width: 200px;
+  height: 75px;
+  border-radius: 40px;
+  font-family: YekanBakh;
+  font-weight: 600;
+  color: #e3e3e3;
+  border: solid 3px transparent;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(101deg, #f197bd, #ed865d);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: none;
+}
+
+.button-start:focus {
+  outline: none;
+}

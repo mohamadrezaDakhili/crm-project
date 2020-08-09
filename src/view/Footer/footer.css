@@ -1,0 +1,25 @@
+.box-footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100vw;
+  color: #e3e3e3;
+}
+.fix-text-footer {
+  font-family: YekanBakh;
+  font-weight: 100;
+  font-size: 15px;
+}
+.fix-title-footer {
+  font-family: YekanBakh;
+  font-weight: 600;
+  font-size: 30px;
+}
+.box-logo {
+  display: inline;
+  font-size: 25px;
+  background-image: linear-gradient(to left, #b83b5e 10%, #ef895d 100%);
+  border-top-left-radius: 40%;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+}

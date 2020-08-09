@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import LayoutContainer from "./view/Layuot.jsx";
+import Footer from "./view/Footer/Footer.jsx";
 
 function App() {
   const [backgroundImage, setBackground] = useState();
@@ -9,13 +11,25 @@ function App() {
       "http://www.textures4photoshop.com/tex/thumbs/space-background-with-starfield-free-download-thumb45.jpg"
     );
   }, []);
+
   return (
     <div
       style={{
-        backgroundImage: "url(" + backgroundImage + ")",
+        width: "100vw",
+        height: "100vh",
       }}
-      className="img-background"
-    ></div>
+      className="position-relative"
+    >
+      <div
+        style={{
+          backgroundImage: "url(" + backgroundImage + ")",
+        }}
+        className="img-background"
+      ></div>
+
+      <LayoutContainer />
+      <Footer />
+    </div>
   );
 }
 
