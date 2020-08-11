@@ -1,21 +1,36 @@
 import React from "react";
 import { Col, Row } from "reactstrap";
 import "./quiz.css";
+import { useHistory, useParams } from "react-router-dom";
+function Quiz(props) {
+  const history = useHistory();
+  const params = useParams();
+  const { list } = props;
 
-function Quiz() {
+  const isNextFinish = () => {
+    if (props.list.length === Number(params["index"]) + 1) {
+      return "/finish";
+    } else {
+      return `/question/${Number(params["index"]) + 1}`;
+    }
+  };
+
   return (
     <Col xl={12} className="text-center">
-      <div className="txt-main-crm pb-5">
-        آیا از زمان انتظار برای پیدا شدن سفیر تپ‌سی راضی هستید؟
-      </div>
-
+      <div className="txt-main-crm pb-5">{list[params["index"]].text}</div>
       <Row
         dir="rtl"
         className="flex-column flex-md-row justify-content-md-between p-0 m-0 mt-5 pt-5"
       >
-        <div className="answerItem">راضی ام</div>
-        <div className="answerItem">آره ولی اوکیه</div>
-        <div className="answerItem">خیلی افتضاحه</div>
+        {list[params["index"]].options.map((item, index) => (
+          <div
+            onClick={() => history.push(isNextFinish())}
+            className="answerItem"
+            key={index}
+          >
+            {item.text}
+          </div>
+        ))}
       </Row>
     </Col>
   );

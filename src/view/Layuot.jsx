@@ -5,6 +5,7 @@ import logoBrand from "../logo-tapsi.png";
 import Quiz from "./Main/Quiz";
 import EndPage from "./Main/EndPage/EndPage";
 import Router from "../Router/index";
+import StepperQuiz from "./Header/StepperQuiz";
 function Layuot(props) {
   const { initialData } = props;
   return (
@@ -14,9 +15,6 @@ function Layuot(props) {
         className="row justify-content-center align-items-center p-0 m-0"
       >
         <Router initialData={{ ...initialData }} />
-        {/* <Quiz /> */}
-
-        {/* <EndPage /> */}
       </div>
     </Container>
   );
