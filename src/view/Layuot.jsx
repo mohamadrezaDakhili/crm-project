@@ -1,11 +1,8 @@
 import React from "react";
-import { Container, Col } from "reactstrap";
+import { Container } from "reactstrap";
 import "./layout.css";
-import logoBrand from "../logo-tapsi.png";
-import Quiz from "./Main/Quiz";
-import EndPage from "./Main/EndPage/EndPage";
 import Router from "../Router/index";
-import StepperQuiz from "./Header/StepperQuiz";
+
 function Layuot(props) {
   const { initialData } = props;
   return (

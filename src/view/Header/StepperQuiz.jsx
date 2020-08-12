@@ -13,29 +13,6 @@ import StepConnector from "@material-ui/core/StepConnector";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
-const QontoConnector = withStyles({
-  alternativeLabel: {
-    top: 10,
-    left: "calc(-50% + 16px)",
-    right: "calc(50% + 16px)",
-  },
-  active: {
-    "& $line": {
-      borderColor: "#784af4",
-    },
-  },
-  completed: {
-    "& $line": {
-      borderColor: "#784af4",
-    },
-  },
-  line: {
-    borderColor: "#eaeaf0",
-    borderTopWidth: 3,
-    borderRadius: 1,
-  },
-})(StepConnector);
-
 const useQontoStepIconStyles = makeStyles({
   root: {
     color: "#eaeaf0",
@@ -222,24 +199,6 @@ export default function StepperQuiz() {
 
   return (
     <div className={classes.root}>
-      <Stepper alternativeLabel activeStep={activeStep}>
-        {steps.map((label) => (
-          <Step key={label}>
-            <StepLabel>{label}</StepLabel>
-          </Step>
-        ))}
-      </Stepper>
-      <Stepper
-        alternativeLabel
-        activeStep={activeStep}
-        connector={<QontoConnector />}
-      >
-        {steps.map((label) => (
-          <Step key={label}>
-            <StepLabel StepIconComponent={QontoStepIcon}>{label}</StepLabel>
-          </Step>
-        ))}
-      </Stepper>
       <Stepper
         alternativeLabel
         activeStep={activeStep}
