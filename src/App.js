@@ -58,7 +58,6 @@ function App() {
       ></div>
 
       <LayoutContainer initialData={initialData} />
-      <Footer />
     </div>
   );
 }
